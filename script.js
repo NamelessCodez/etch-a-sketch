@@ -14,7 +14,7 @@ addDivs();
 function generateNewGrid(size) {
     // delete the existing grid within the container
     const container = document.querySelector('.div-container');
-    container.innerHTML = ""
+    container.innerHTML = "";
     const itemSize = 960 / size;
     // generate the required grid
     for (let i = 0; i < size * size; i++) {
@@ -27,12 +27,13 @@ function generateNewGrid(size) {
 }
 
 gridSize = parseInt(prompt('Enter grid size'));
-generateNewGrid(gridSize);
+if (gridSize > 100) {
+    alert('Size must be less than 100');
+} else {
+    generateNewGrid(gridSize);
 
-// add hover effect
-const divs = document.querySelectorAll('.div');
-divs.forEach(div => div.addEventListener('mouseenter', () =>
-    div.style.backgroundColor = 'white'));
-
-
-
+    // add hover effect
+    const divs = document.querySelectorAll('.div');
+    divs.forEach(div => div.addEventListener('mouseenter', () =>
+        div.style.backgroundColor = 'white'));
+}

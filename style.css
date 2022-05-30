@@ -11,14 +11,8 @@ body {
     width: 960px;
    
 }
-
 .div {
     margin: 0;
     border: 0;
-    background-color: black;
-    
-}
-
-.div-hover {
-    background-color: blue;
+    background-color: black;   
 }
